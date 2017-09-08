@@ -1,0 +1,31 @@
+Ranks:
+  '0':
+    permission: rank.0
+    time: 10
+  '1':
+    permission: rank.0
+    time: 10
+  '2':
+    permission: rank.0
+    time: 10
+Config:
+    Signs:
+        Lives:
+            Out:
+                1: '&4&lLives'
+                2: '&6you have'
+                3: ''
+                4: '%lives%, buy more'
+            Got:
+                1: '&4&lLives'
+                2: '&6you have'
+                3: ''
+                4: '%lives%'
+        Timer:
+            1: '&4&lTimer'
+            2: '%s% remaining'
+            3: ''
+            4: '&7Click buy lives'
+DeathbannedCommands:
+  - 'helpop'
+  - 'report'

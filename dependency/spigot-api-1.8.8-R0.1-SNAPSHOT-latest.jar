@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html id="XenForo" lang="en-US" dir="LTR" class="Public NoJs LoggedOut NoSidebar  Responsive pageIsLtr   hasTabLinks  hasSearch   is-sidebarOpen hasRightSidebar is-setWidth navStyle_0 pageStyle_1 hasFlexbox" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<base href="https://www.spigotmc.org/"/>
+<script>
+			var _b = document.getElementsByTagName('base')[0], _bH = "https://www.spigotmc.org/";
+			if (_b && _b.href != _bH) _b.href = _bH;
+		</script>
+<title>BuildTools Updates &amp; Information | SpigotMC - High Performance Minecraft</title>
+<noscript><style>.JsOnly,.jsOnly{display:none!important;}</style></noscript>
+<link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style=16&amp;dir=LTR&amp;d=1464037796"/>
+<link rel="stylesheet" href="css.php?css=EWRporta2_Global,bb_code,dark_postrating,login_bar,message,message_user_info,moderator_bar,nat_public_css,thread_view&amp;style=16&amp;dir=LTR&amp;d=1464037796"/>
+<link rel="stylesheet" href="css.php?css=uix,spigot&amp;style=16&amp;dir=LTR&amp;d=1464037796"/>
+<style></style>
+<link rel="stylesheet" href="css.php?css=EXTRA&amp;style=16&amp;dir=LTR&amp;d=1464037796"/>
+<script>
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-35672664-3', 'auto');
+	ga('send', 'pageview');
+
+</script>
+<link href="//static.spigotmc.org/styles/spigot/uix/css/font-awesome.min.css" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu:400,700' rel='stylesheet' type='text/css'>
+<script src="//static.spigotmc.org/js/jquery/jquery-1.11.0.min.js"></script>
+<script src="//static.spigotmc.org/js/xenforo/xenforo.js?_v=3142c93d"></script>
+<script src="//static.spigotmc.org/js/dark/postrating.js?1460197688&amp;_v=3142c93d"></script>
+<script>
+	uix = {
+		elm: {},
+		fn:{},
+		init: function(){
+			if (uix.betaMode) {
+				console.group('uix.%cinit()', 'color:#3498DB');
+			}
+			for(var x=0;x<uix.events.init.length;x++){
+				uix.events.init[x]()
+		  	}
+		  	console.groupEnd('uix.%cinit()','color:#3498DB')
+		},
+	  	events: {init:[]},
+	  	on: function(event, fn){
+	  		if(event=='init'){
+	  			uix.events.init.push(fn)
+	  		}
+	  	},
+	  
+		betaMode				: parseInt('0'),
+		jsPathUsed				: 'uix_style',
+		jsGlobal				: parseInt('0'),
+		
+	  
+	  	version					: '1.5.6.0',
+	  	jsHeadVersion				: '1.5.6.0',
+	  	addonVersion				: '1000970',
+	  	contentTemplate				: 'thread_view',
+	  
+		globalPadding 				: parseInt('16px'),
+		sidebarWidth				: parseInt('250px'),
+		mainContainerMargin  	        	: '266px',
+		maxResponsiveWideWidth   		: parseInt('800px'),
+		maxResponsiveMediumWidth 		: parseInt('610px'),
+		maxResponsiveNarrowWidth 		: parseInt('480px'),
+		sidebarMaxResponsiveWidth		: parseInt('800px'),
+		
+			responsiveMessageBreakpoint		: parseInt('610px'),
+		
+		sidebarMaxResponsiveWidthStr		: '800px',
+		
+		
+			offCanvasRightTriggerWidth	: parseInt('800px'),
+		
+		
+		
+			offCanvasLeftTriggerWidth	: parseInt('800px'),
+		
+		
+		
+			
+				offCanvasNavTriggerWidth	: parseInt('800px'),
+			
+		
+		
+			
+				offCanvasVisitorTriggerWidth	: parseInt('800px'),
+			
+		
+		
+		offcanvasTriggerAnimationDuration	: parseInt('300ms'),
+		
+		
+		
+		
+		dropdownMenuAnimationSpeed		: parseInt('0ms'),
+		inlineAlertBalloons			: (parseInt('1') && !parseInt('1')) || parseInt('1'),
+	  
+		jumpToFixedDelayHide			: parseInt('1'),
+	  
+		stickyNavigationMinWidth 		: parseInt('0'),
+		stickyNavigationMinHeight		: parseInt('600'),
+		stickyNavigationMaxWidth 		: parseInt('0'),
+		stickyNavigationMaxHeight		: parseInt('0'),
+		stickyNavigationPortraitMinWidth 	: parseInt('320'),
+		stickyNavigationPortraitMinHeight	: parseInt('500'),
+		stickyNavigationPortraitMaxWidth 	: parseInt('0'),
+		stickyNavigationPortraitMaxHeight	: parseInt('0'),
+		stickySidebar 				: 0,
+		
+			sidebarInnerFloat		: "right",
+		
+		RTL					: 0,
+		stickyItems 				: {},
+		stickyGlobalMinimumPosition		: parseInt('200px'),
+		stickyGlobalScrollUp			: parseInt('0'),
+		stickyDisableIOSThirdParty		: parseInt('1'),
+		preventAlwaysSticky			: parseInt('0'),
+		
+		searchMinimalSize			: parseInt('610px'),
+		
+		searchPosition				: parseInt('0'),
+		
+		nodeStyle				: parseInt('0'),
+		pageStyle				: parseInt('1'),
+		
+		enableBorderCheck			: parseInt('0'),
+		enableULManager				: parseInt('0'),
+		
+		threadSlidingAvatar			: parseInt('0'),
+		threadSlidingExtra			: parseInt('0'),
+		threadSlidingHover			: parseInt('0'),
+		threadSlidingStaffShow			: parseInt('0'),
+		threadSlidingGlobalEnable		: parseInt('1'),
+		
+		signatureHidingEnabled			: parseInt('0'),
+		signatureHidingEnabledAddon		: parseInt('1'),
+		signatureMaxHeight			: parseInt('100px'),
+		signatureHoverEnabled			: parseInt('0'),
+		
+		enableStickyFooter 			: parseInt('1'),
+		stickyFooterBottomOffset 		: parseInt('16px') * 2,
+		
+		
+			sidebarStickyBottomOffset	: parseInt(0),
+		
+	  
+	  	
+			offCanvasSidebar			: 1,
+
+			
+				offCanvasSidebarVisitorTabs		: 1,
+			
+		
+		
+		
+		offcanvasLeftStatic			: 1 && parseInt('0') && parseInt('1'),
+		offcanvasRightStatic			: 0 && parseInt('0') && parseInt('1'),
+		offcanvasLeftStaticBreakpoint		: parseInt('1300px'),
+		offcanvasRightStaticBreakpoint		: parseInt('1300px'),
+	  
+		reinsertWelcomeBlock			: parseInt('0'),
+	  
+		sidebarCookieExpire			: '',
+		canCollapseSidebar			: '',
+		
+		cookiePrefix				: 'xf_',
+		sidebarLocation 			: parseInt('0'),
+		
+		collapsibleSidebar			: parseInt('0'),
+		collapsedNodesDefault			: '',
+		widthToggleUpper			: '100%',
+		widthToggleLower			: '1170px',
+		
+			toggleWidthEnabled		: parseInt('0'),
+		
+		toggleWidthBreakpoint			: parseInt('1202'),
+		collapsibleNodes			: parseInt('1'),
+		collapsibleSticky			: parseInt('0'),
+		ajaxWidthToggleLink			: 'uix/toggle-width',
+		ajaxStickyThreadToggleLink		: 'uix/toggle-sticky-threads',
+		ajaxStickyThreadExpandLink		: 'uix/expand-sticky-threads',
+		ajaxStickyThreadCollapseLink		: 'uix/collapse-sticky-threads',
+		ajaxSidebarToggleLink			: 'uix/toggle-sidebar',
+		
+		stickySidebarDelayInit			: parseInt('1'),
+		
+		user					: {
+								'themeName'		: 'SpigotMC',
+								'-themeParents'		: '16,15,0',
+								'-themeModified'	: '1464037796',
+								'-themeSelectable'	: '1',
+								languageName		: 'English (US)',
+								stickyEnableUserbar	: (parseInt('') == parseInt('')) ? parseInt('') : true,
+								stickyEnableNav		: (parseInt('') == parseInt('')) ? parseInt('') : true,
+								stickyEnableSidebar	: (parseInt('') == parseInt('')) ? parseInt('') : true,
+								widthToggleState	: (parseInt('0') == parseInt('0')) ? parseInt('0') : parseInt('0'),
+								stickyThreadsState	: (parseInt('') == parseInt('')) ? (parseInt('') > 0) : 0,
+								
+									sidebarState	: 0,
+								
+								
+									collapseUserInfo : 1,
+								
+								
+									signatureHiding : 1,
+								
+								isAdmin			: parseInt('0"')
+							}
+	};
+	
+	if(uix.stickyNavigationMaxWidth == 0){uix.stickyNavigationMaxWidth = 999999}
+	if(uix.stickyNavigationMaxHeight == 0){uix.stickyNavigationMaxHeight = 999999}
+	if(uix.stickyNavigationPortraitMaxWidth == 0){uix.stickyNavigationPortraitMaxWidth = 999999}
+	if(uix.stickyNavigationPortraitMaxHeight == 0){uix.stickyNavigationPortraitMaxHeight = 999999}
+	
+	
+	
+	
+	
+	$(document).ready(function(){
+	
+	//put jquery code here
+	
+
+});
+	
+	uix.debug = function() {
+		result = "\n\n############============   Begin Copying Here   ============############\n\n";
+		result += "Error: the functions file was not found.";
+		result += "\n\n############============   End Copying Here   ============############\n\n";
+
+		console.log(result);
+	}
+
+</script>
+<script src="//static.spigotmc.org/js/audentio/uix_style/functions.min.js?_v=3142c93d_1.5.6.0"></script>
+<script>
+	uix.adminJsError = function(errMsg) {
+		console.error(errMsg);
+		
+		
+	}
+	
+	uix.fixJsVisibility = function() {
+		var userBar = $('.hasJs #userBar');
+		var nodeList = $('.hasJs #forums, .hasJs .category_view .nodeList, .hasJs .watch_forums .nodeList');
+		var panels = $('.js-uix_panels')
+		if (userBar.length) userBar.css('display', 'block');
+		if (nodeList.length) nodeList.css('visibility', 'visible');
+		if (panels.length) $('.js-uix_panels').removeClass('needsInit');
+	}
+	
+	uix.catchJsError = function(err) {
+		console.log("\n\n############============   Begin Copying Here   ============############\n\n")
+		var errMsg = "Uh Oh!  It looks like there's an error in your page's javascript.  There will likely be significant issues with the use of the forum until this is corrected.  If you are unable to resolve this and believe it is due to a bug in your Audentio Design theme, contact Audentio support and include a copy of the text between the designated areas from your javascript console.  This is the error: \n\n" + err ;
+		uix.fixJsVisibility();	
+		uix.adminJsError(errMsg);
+		console.log("\n\n");
+		console.log(err);
+		console.log("\n\n");
+		try {
+			uix.debug(true);
+		} catch (err) {
+			console.log("Unable to include uix.debug();");
+		}
+		
+		console.log("\n\n############============   End Copying Here   ============############\n\n");
+	}
+
+	$(document).ready(function(){
+		if (typeof(audentio) === 'undefined') {
+			var errMsg = 'Uh Oh!  It looks like the javascript for your theme was not found in /js/audentio/uix_style/.\n\n';
+			if (uix.jsGlobal) {
+				errMsg += 'Your forum is set to use the same javascript directory for all your themes.  Consider disabling this or modifying the directory.  Options are located under Options > [UI.X] General.\n\n'
+			} else {
+				errMsg += 'Your theme has set the location of its javascript directory.  You may need to modify the javascript directory location style property located under [UI.X] Global Settings > Javascript Path.\n\n'
+			}
+			errMsg += 'If your files are in the directory specified, ensure that your file permissions allow them to be read.  There will likely be significant issues with the use of the forum until this is corrected.  If you are unable to resolve this, contact Audentio support.  This error has also been logged to the javascript console.';
+			
+			uix.fixJsVisibility();
+			
+			uix.adminJsError(errMsg);
+		} else if (uix.jsHeadVersion != uix.jsVersion) {
+			var errMsg = 'Uh Oh! It looks like the version of your javascript functions file does not match the version of your page_container_js_head template.  \n\nYour javascript functions file is version "' + uix.jsVersion + '". \nYour page_container_js_head is version "' + uix.jsHeadVersion + '".  \n\nIf your functions file version number is higher, ensure that you have merged all templates (especially page_container_js_head).  If your page_container_js_head version number is higher, ensure that you have correctly uploaded the latest version of the javascript functions file and that you have cleared anything that could cache an old version of the javascript (CDN / Cloudflare / etc.). \n\nThis issue could cause parts of your forum to not display or function correctly.  If this does not resolve the issue contact Audentio support.  This error has also been logged to the javascript console.';
+			uix.adminJsError(errMsg);
+		}
+	});
+</script>
+<script>
+	try {
+		uix.dateHelper.phrase = {
+			now: 'now',
+			second: 's',
+			minute: 'm',
+			hour: 'h',
+			day: 'd',
+			week: 'w',
+			year: 'y',
+			century: 'c',
+			ago: '{time} ago'
+		}
+		
+		
+		uix.sticky.stickyMinDist = parseInt('50');
+		
+		$(document).ready(function(){
+			try {
+				
+				
+				
+				uix.initFunc();
+			} catch (err) {
+				uix.catchJsError(err);
+			}
+		});
+	} catch (err) {
+		uix.catchJsError(err);
+	}
+</script>
+<link rel="apple-touch-icon" href="https://static.spigotmc.org/img/spigot-og.png"/>
+<link rel="alternate" type="application/rss+xml" title="RSS feed for SpigotMC - High Performance Minecraft" href="forums/-/index.rss"/>
+<link rel="next" href="threads/buildtools-updates-information.42865/page-2"/>
+<link rel="canonical" href="http://www.spigotmc.org/threads/buildtools-updates-information.42865/"/>
+<meta name="description" content="It's been nearly 40 days since our 1.8 builds were released, and in that time we have made around 240 releases, averaging around 5 a day. Great work..."/> <meta property="og:site_name" content="SpigotMC - High Performance Minecraft"/>
+<meta property="og:image" content="https://secure.gravatar.com/avatar/b53fd878a84d268da2b6456e0b96cae5?s=96&amp;amp;d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_m.png"/>
+<meta property="og:image" content="https://static.spigotmc.org/img/spigot-og.png"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://www.spigotmc.org/threads/buildtools-updates-information.42865/"/>
+<meta property="og:title" content="BuildTools Updates &amp; Information"/>
+<meta property="og:description" content="It's been nearly 40 days since our 1.8 builds were released, and in that time we have made around 240 releases, averaging around 5 a day. Great work..."/>
+ 
+<link href="android-app://com.quoord.tapatalkpro.activity/tapatalk/www.spigotmc.org?location=topic&amp;tid=42865&amp;page=1&amp;perpage=20&amp;channel=google-indexing" rel="alternate"/>
+<link href="ios-app://307880732/tapatalk/www.spigotmc.org?location=topic&amp;tid=42865&amp;page=1&amp;perpage=20&amp;channel=google-indexing" rel="alternate"/>
+<meta name="theme-color" content="#ed8106">
+</head>
+<body class="node2 node32 SelectQuotable">
+<div id="loginBar">
+<div class="pageContent">
+<span class="helper"></span>
+</div>
+<div class="pageWidth">
+</div>
+</div>
+<div class="js-uix_panels uix_panels ">
+<aside class="js-sidePanelWrapper sidePanelWrapper  sidePanelWrapper--left">
+<a href="#" class="js-panelMask uix_panelMask"></a>
+<div class="sidePanel sidePanel--nav">
+<nav>
+<ul class="sidePanel__navTabs">
+ 
+ 
+<li class="navTab articles ">
+<a href="https://www.spigotmc.org/" class="navLink">Home</a>
+<a href="https://www.spigotmc.org/" class="SplitCtrl"><i class="uix_icon js-offcanvasIcon uix_icon-expandDropdown"></i></a>
+<div class="tabLinks">
+<ul class="secondaryContent blockLinksList">
+<li><a href="find-new/posts" rel="nofollow">Recent Posts</a></li>
+<li><a href="recent-activity/">Recent Activity</a></li>
+<li style="width: 50px; height: 10px;"></li>
+</ul>
+</div>
+</li>
+ 
+<li class="navTab forums selected">
+<a href="https://www.spigotmc.org/forums/" class="navLink">Forums</a>
+<a href="https://www.spigotmc.org/forums/" class="SplitCtrl"><i class="uix_icon js-offcanvasIcon uix_icon-expandDropdown"></i></a>
+<div class="tabLinks">
+<ul class="blockLinksList">
+<li><a href="search/?type=post">Search Forums</a></li>
+<li><a href="find-new/posts" rel="nofollow">Recent Posts</a></li>
+</ul>
+</div>
+</li>
+ 
+<li class="navTab resources ">
+<a href="https://www.spigotmc.org/resources/" class="navLink">Resources</a>
+<a href="https://www.spigotmc.org/resources/" class="SplitCtrl"><i class="uix_icon js-offcanvasIcon uix_icon-expandDropdown"></i></a>
+<div class="tabLinks">
+<ul class="secondaryContent blockLinksList">
+<li><a href="search/?type=resource_update">Search Resources</a></li>
+<li><a href="resources/authors">Most Active Authors</a></li>
+<li><a href="resources/reviews">Latest Reviews</a></li>
+</ul>
+</div>
+</li>
+<li class="navTab wiki ">
+<a href="https://www.spigotmc.org/wiki/" class="navLink">Wiki</a>
+<a href="https://www.spigotmc.org/wiki/" class="SplitCtrl"><i class="uix_icon js-offcanvasIcon uix_icon-expandDropdown"></i></a>
+<div class="tabLinks">
+<ul class="secondaryContent blockLinksList">
+<li><a href="wiki/">Wiki Index</a></li>
+<li><a href="wiki/special/pages">Page List</a></li>
+<li><a href="wiki/special/recent">Recent Activity</a></li>
+</ul>
+</div>
+</li>
+<li class="navTab xfx_staff ">
+<a href="XenStaff/" class="navLink">Team</a>
+<a href="XenStaff/" class="SplitCtrl"><i class="uix_icon js-offcanvasIcon uix_icon-expandDropdown"></i></a>
+<div class="tabLinks">
+<ul class="secondaryContent blockLinksList">
+<li><a href="XenStaff/#Administrator">Administrator</a></li>
+<li><a href="XenStaff/#Moderator">Moderator</a></li>
+<li><a href="XenStaff/#Sponsor">Sponsor</a></li>
+<li><a href="XenStaff/#Developer">Developer</a></li>
+<li><a href="XenStaff/#Wiki Team">Wiki Team</a></li>
+<li><a href="XenStaff/#Services Staff">Services Staff</a></li>
+<li><a href="XenStaff/#Retired">Retired</a></li>
+<li><a href="XenStaff/#Junior Mod">Junior Mod</a></li>
+<li><a href="XenStaff/#Resource Staff">Resource Staff</a></li>
+<li><a href="XenStaff/#IRC Staff">IRC Staff</a></li>
+</ul>
+</div>
+</li>
+<li class="navTab nodetab31 ">
+<a href="https://www.spigotmc.org/link-forums/downloads.31/" class="navLink">Downloads</a>
+<a href="https://www.spigotmc.org/link-forums/downloads.31/" class="SplitCtrl"><i class="uix_icon js-offcanvasIcon uix_icon-expandDropdown"></i></a>
+<div class="tabLinks">
+<ul class="secondaryContent blockLinksList">
+<li class="natMenuLevel0">
+<a href="link-forums/spigot-buildtools.88/">Spigot / BuildTools</a>
+</li>
+<li class="natMenuLevel0">
+<a href="link-forums/bungeecord.28/">BungeeCord</a>
+</li>
+<li class="natMenuLevel0">
+<a href="link-forums/jenkins.29/">Jenkins</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="navTab nodetab75 ">
+<a href="https://www.spigotmc.org/link-forums/hub.75/" class="navLink">Hub</a>
+</li>
+<li class="navTab nodetab14 ">
+<a href="https://www.spigotmc.org/link-forums/issues.14/" class="navLink">Issues</a>
+</li>
+<li class="navTab nodetab19 ">
+<a href="https://www.spigotmc.org/pages/irc/" class="navLink">Chat</a>
+</li>
+ 
+<li class="navTab members ">
+<a href="https://www.spigotmc.org/members/" class="navLink">Members</a>
+<a href="https://www.spigotmc.org/members/" class="SplitCtrl"><i class="uix_icon js-offcanvasIcon uix_icon-expandDropdown"></i></a>
+<div class="tabLinks">
+<ul class="blockLinksList">
+<li><a href="members/">Notable Members</a></li>
+<li><a href="online/">Current Visitors</a></li>
+<li><a href="recent-activity/">Recent Activity</a></li>
+</ul>
+</div>
+</li>
+ 
+<li class="navTab nodetab44 ">
+<a href="https://www.spigotmc.org/link-forums/donate.44/" class="navLink">Donate</a>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+<aside class="js-sidePanelWrapper sidePanelWrapper  sidePanelWrapper--right">
+<a href="#" class="js-panelMask uix_panelMask"></a>
+<div class="sidePanel sidePanel--login">
+<form action="login/login" method="post" class="xenForm--uixLoginForm xenForm">
+<dl class="ctrlUnit fullWidth">
+<dt><label for="ctrl_pageLogin_login">Your name or email address:</label></dt>
+<dd><input type="text" name="login" value="" id="ctrl_pageLogin_login" class="textCtrl uix_fixIOSClickInput" tabindex="1"/></dd>
+</dl>
+<dl class="ctrlUnit fullWidth">
+<dt><label for="ctrl_pageLogin_password">Password:</label></dt>
+<dd>
+<input type="password" name="password" class="textCtrl uix_fixIOSClickInput" id="ctrl_pageLogin_password" tabindex="2"/>
+<div><a href="lost-password/" class="OverlayTrigger OverlayCloser" tabindex="6">Forgot your password?</a></div>
+</dd>
+</dl>
+<dl class="ctrlUnit submitUnit">
+<dd>
+<input type="submit" class="button primary" value="Log in" data-loginPhrase="Log in" data-signupPhrase="Sign up" tabindex="4"/>
+<label class="rememberPassword"><input type="checkbox" name="remember" value="1" id="ctrl_pageLogin_remember" tabindex="3"/> Stay logged in</label>
+</dd>
+</dl>
+<input type="hidden" name="cookie_check" value="1"/>
+<input type="hidden" name="_xfToken" value=""/>
+<input type="hidden" name="redirect" value="/threads/buildtools-updates-information.42865/"/>
+</form>
+</div>
+</aside>
+<div class="mainPanelWrapper">
+<a href="#" class="js-panelMask uix_panelMask"></a>
+ 
+<style type="text/css">.ui-mobile [data-role="page"],.ui-mobile [data-role="dialog"],.ui-page{top:auto;}</style>
+<script type="text/javascript">if(typeof(tapatalkDetect) == "function"){tapatalkDetect()}</script>
+ 
+<div class="uix_wrapperFix" style="height: 1px; margin-bottom: -1px;"></div>
+<div id="uix_wrapper">
+<div id="headerMover">
+<div id="headerProxy"></div>
+<header>
+<div id="header">
+<div id="logoBlock" class="header__blockItem ">
+<div class="pageContent">
+<div class="spigot_colorOverlay">
+<div class="pageWidth">
+<div id="logo"><a href="https://www.spigotmc.org/">
+<span></span>
+<img src="//static.spigotmc.org/img/spigot.png" alt="SpigotMC - High Performance Minecraft"/>
+</a></div>
+<div class="spigot_headerReadAboutWrapper">
+<p>Want a better Minecraft server? <br> Read about SpigotMC <a href="http://www.spigotmc.org/wiki/about-spigot/">here</a>!</p>
+</div>
+<span class="helper"></span>
+</div>
+</div>
+</div>
+</div>
+<div id="navigation" class="header__blockItem withSearch ">
+<div class="sticky_wrapper">
+<div class="uix_navigationWrapper">
+<div class="pageContent">
+<nav>
+<div class="navTabs">
+<div class="pageWidth">
+<ul class="publicTabs navLeft">
+<li class="navTab  navTab--panelTrigger navTab--navPanelTrigger PopupClosed">
+<a class="navLink js-leftPanelTrigger" href="#">
+<i class="uix_icon uix_icon-menu"></i>Menu
+</a>
+</li>
+ 
+ 
+<li class="navTab articles Popup PopupControl PopupClosed">
+<a href="https://www.spigotmc.org/" class="navLink">Home</a>
+<a href="https://www.spigotmc.org/" class="SplitCtrl" rel="Menu"></a>
+<div class="Menu JsOnly tabMenu articlesTabLinks">
+<div class="primaryContent menuHeader">
+<h3>Home</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="find-new/posts" rel="nofollow">Recent Posts</a></li>
+<li><a href="recent-activity/">Recent Activity</a></li>
+<li style="width: 50px; height: 10px;"></li>
+</ul>
+</div>
+</li>
+ 
+<li class="navTab forums selected">
+<a href="https://www.spigotmc.org/forums/" class="navLink">Forums</a>
+<a href="https://www.spigotmc.org/forums/" class="SplitCtrl" rel="Menu"></a>
+<div class="tabLinks forumsTabLinks">
+<div class="pageWidth">
+<div class="primaryContent menuHeader">
+<h3>Forums</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="search/?type=post">Search Forums</a></li>
+<li><a href="find-new/posts" rel="nofollow">Recent Posts</a></li>
+</ul>
+<div id="searchBar" class="hasSearchButton">
+<i id="QuickSearchPlaceholder" class="uix_icon uix_icon-search" title="Search"></i>
+<fieldset id="QuickSearch">
+<form action="search/search" method="post" class="formPopup">
+<div class="primaryControls">
+ 
+<i class="uix_icon uix_icon-search" onclick='$("#QuickSearch form").submit()'></i>
+<input type="search" name="keywords" value="" class="textCtrl" placeholder="Search..." results="0" title="Enter your search and hit enter" id="QuickSearchQuery"/>
+ 
+</div>
+<div class="secondaryControls">
+<div class="controlsWrapper">
+ 
+<dl class="ctrlUnit">
+<dt></dt>
+<dd><ul>
+<li><label><input type="checkbox" name="title_only" value="1" id="search_bar_title_only" class="AutoChecker" data-uncheck="#search_bar_thread"/> Search titles only</label></li>
+</ul></dd>
+</dl>
+<dl class="ctrlUnit">
+<dt><label for="searchBar_users">Posted by Member:</label></dt>
+<dd>
+<input type="text" name="users" value="" class="textCtrl AutoComplete" id="searchBar_users"/>
+<p class="explain">Separate names with a comma.</p>
+</dd>
+</dl>
+<dl class="ctrlUnit">
+<dt><label for="searchBar_date">Newer Than:</label></dt>
+<dd><input type="date" name="date" value="" class="textCtrl" id="searchBar_date"/></dd>
+</dl>
+<dl class="ctrlUnit">
+<dt></dt>
+<dd><ul>
+<li><label title="Search only BuildTools Updates &amp; Information"><input type="checkbox" name="type[post][thread_id]" value="42865" id="search_bar_thread" class="AutoChecker" data-uncheck="#search_bar_title_only, #search_bar_nodes"/> Search this thread only</label></li>
+<li><label title="Search only News and Announcements"><input type="checkbox" name="nodes[]" value="2" id="search_bar_nodes" class="Disabler AutoChecker" checked="checked" data-uncheck="#search_bar_thread"/> Search this forum only</label>
+<ul id="search_bar_nodes_Disabler">
+<li><label><input type="checkbox" name="type[post][group_discussion]" value="1" id="search_bar_group_discussion" class="AutoChecker" data-uncheck="#search_bar_thread"/> Display results as threads</label></li>
+</ul></li>
+</ul></dd>
+</dl>
+</div>
+ 
+<dl class="ctrlUnit submitUnit">
+<dt></dt>
+<dd>
+<input type="submit" value="Search" class="button primary Tooltip" title="Find Now"/>
+<a href="search/" class="button moreOptions Tooltip" title="Advanced Search">More...</a>
+<div class="Popup" id="commonSearches">
+<a rel="Menu" class="button NoPopupGadget Tooltip" title="Useful Searches" data-tipclass="flipped"><span class="arrowWidget"></span></a>
+<div class="Menu">
+<div class="primaryContent menuHeader">
+<h3>Useful Searches</h3>
+</div>
+<ul class="secondaryContent blockLinksList">
+ 
+<li><a href="find-new/posts?recent=1" rel="nofollow">Recent Posts</a></li>
+ 
+</ul>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<input type="hidden" name="_xfToken" value=""/>
+</form>
+</fieldset>
+</div>
+<div class="uix_minimalSearchWrapper">
+<div id="uix_searchMinimal">
+<form action="search/search" method="post">
+<i id="uix_searchMinimalClose" class="uix_icon uix_icon-close" title="Close"></i>
+<i id="uix_searchMinimalOptions" class="uix_icon uix_icon-cog" title="Options"></i>
+<div id="uix_searchMinimalInput">
+<input type="search" name="keywords" value="" placeholder="Search..." results="0"/>
+</div>
+<input type="hidden" name="_xfToken" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+</li>
+ 
+<li class="navTab resources Popup PopupControl PopupClosed">
+<a href="https://www.spigotmc.org/resources/" class="navLink">Resources</a>
+<a href="https://www.spigotmc.org/resources/" class="SplitCtrl" rel="Menu"></a>
+<div class="Menu JsOnly tabMenu resourcesTabLinks">
+<div class="primaryContent menuHeader">
+<h3>Resources</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="search/?type=resource_update">Search Resources</a></li>
+<li><a href="resources/authors">Most Active Authors</a></li>
+<li><a href="resources/reviews">Latest Reviews</a></li>
+</ul>
+</div>
+</li>
+<li class="navTab wiki Popup PopupControl PopupClosed">
+<a href="https://www.spigotmc.org/wiki/" class="navLink">Wiki</a>
+<a href="https://www.spigotmc.org/wiki/" class="SplitCtrl" rel="Menu"></a>
+<div class="Menu JsOnly tabMenu wikiTabLinks">
+<div class="primaryContent menuHeader">
+<h3>Wiki</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="wiki/">Wiki Index</a></li>
+<li><a href="wiki/special/pages">Page List</a></li>
+<li><a href="wiki/special/recent">Recent Activity</a></li>
+</ul>
+</div>
+</li>
+<li class="navTab xfx_staff Popup PopupControl PopupClosed">
+<a href="XenStaff/" class="navLink">Team</a>
+<a href="XenStaff/" class="SplitCtrl" rel="Menu"></a>
+<div class="Menu JsOnly tabMenu xfx_staffTabLinks">
+<div class="primaryContent menuHeader">
+<h3>Team</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="XenStaff/#Administrator">Administrator</a></li>
+<li><a href="XenStaff/#Moderator">Moderator</a></li>
+<li><a href="XenStaff/#Sponsor">Sponsor</a></li>
+<li><a href="XenStaff/#Developer">Developer</a></li>
+<li><a href="XenStaff/#Wiki Team">Wiki Team</a></li>
+<li><a href="XenStaff/#Services Staff">Services Staff</a></li>
+<li><a href="XenStaff/#Retired">Retired</a></li>
+<li><a href="XenStaff/#Junior Mod">Junior Mod</a></li>
+<li><a href="XenStaff/#Resource Staff">Resource Staff</a></li>
+<li><a href="XenStaff/#IRC Staff">IRC Staff</a></li>
+</ul>
+</div>
+</li>
+<li class="navTab nodetab31 Popup PopupControl PopupClosed">
+<a href="https://www.spigotmc.org/link-forums/downloads.31/" class="navLink">Downloads</a>
+<a href="https://www.spigotmc.org/link-forums/downloads.31/" class="SplitCtrl" rel="Menu"></a>
+<div class="Menu JsOnly tabMenu nodetab31TabLinks">
+<div class="primaryContent menuHeader">
+<h3>Downloads</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li class="natMenuLevel0">
+<a href="link-forums/spigot-buildtools.88/">Spigot / BuildTools</a>
+</li>
+<li class="natMenuLevel0">
+<a href="link-forums/bungeecord.28/">BungeeCord</a>
+</li>
+<li class="natMenuLevel0">
+<a href="link-forums/jenkins.29/">Jenkins</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="navTab nodetab75 PopupClosed">
+<a href="https://www.spigotmc.org/link-forums/hub.75/" class="navLink">Hub</a>
+</li>
+<li class="navTab nodetab14 PopupClosed">
+<a href="https://www.spigotmc.org/link-forums/issues.14/" class="navLink">Issues</a>
+</li>
+<li class="navTab nodetab19 PopupClosed">
+<a href="https://www.spigotmc.org/pages/irc/" class="navLink">Chat</a>
+</li>
+ 
+<li class="navTab members Popup PopupControl PopupClosed">
+<a href="https://www.spigotmc.org/members/" class="navLink">Members</a>
+<a href="https://www.spigotmc.org/members/" class="SplitCtrl" rel="Menu"></a>
+<div class="Menu JsOnly tabMenu membersTabLinks">
+<div class="primaryContent menuHeader">
+<h3>Members</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="members/">Notable Members</a></li>
+<li><a href="online/">Current Visitors</a></li>
+<li><a href="recent-activity/">Recent Activity</a></li>
+<li><a href="find-new/profile-posts">New Profile Posts</a></li>
+</ul>
+</div>
+</li>
+ 
+<li class="navTab nodetab44 PopupClosed">
+<a href="https://www.spigotmc.org/link-forums/donate.44/" class="navLink">Donate</a>
+</li>
+ 
+<li class="navTab navigationHiddenTabs navTab--justIcon Popup PopupControl PopupClosed" style="display:none">
+<a rel="Menu" class="navLink NoPopupGadget uix_dropdownDesktopMenu"><i class="uix_icon uix_icon-navOverflow"></i><span class="uix_hide menuIcon">Menu</span></a>
+<div class="Menu JsOnly blockLinksList primaryContent" id="NavigationHiddenMenu"></div>
+</li>
+ 
+</ul>
+<ul class="navRight visitorTabs">
+<li class="navTab login PopupClosed">
+<a href="login/" class="navLink uix_dropdownDesktopMenu OverlayTrigger" data-cacheOverlay="false">
+<strong class="loginText">Log in</strong>
+</a>
+</li>
+<li class="navTab register PopupClosed">
+<a href="register/" class="navLink">
+<strong>Sign up</strong>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<span class="helper"></span>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="content" class="thread_view">
+<div class="pageWidth">
+<div class="pageContent">
+ 
+<div class="breadBoxTop  ">
+<nav>
+<fieldset class="breadcrumb">
+<a href="misc/quick-navigation-menu?selected=node-2" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Open quick navigation"><i class="uix_icon uix_icon-sitemap"></i> </a>
+<div class="boardTitle"><strong>SpigotMC - High Performance Minecraft</strong></div>
+<span class="crumbs">
+<span class="crust homeCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://www.spigotmc.org/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Home</span></a>
+<span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+</span>
+<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://www.spigotmc.org/forums/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Forums</span></a>
+<span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+</span>
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://www.spigotmc.org/forums/#community.32" class="crumb" rel="up" itemprop="url"><span itemprop="title">Community</span></a>
+<span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+</span>
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://www.spigotmc.org/forums/news-and-announcements.2/" class="crumb" rel="up" itemprop="url"><span itemprop="title">News and Announcements</span></a>
+<span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+</span>
+</span>
+</fieldset>
+</nav>
+</div>
+<div class="mainContainer_noSidebar">
+<!--[if lt IE 8]>
+							<p class="importantMessage">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</p>
+						<![endif]-->
+ 
+<div class="titleBar">
+<h1>BuildTools Updates &amp; Information</h1>
+<p id="pageDescription" class="muted ">
+Discussion in '<a href="forums/news-and-announcements.2/">News and Announcements</a>' started by <a href="members/md_5.1/" class="username" dir="auto">md_5</a>, <a href="threads/buildtools-updates-information.42865/"><span class="DateTime" title="Jan 5, 2015 at 11:13 PM">Jan 5, 2015</span></a>.
+</p>
+</div>
+ 
+<dl class="threadAlerts secondaryContent">
+<dt>Thread Status:</dt>
+<dd class="lockedAlert">
+<span class="icon Tooltip" title="Locked" data-tipclass="iconTip"></span>
+Not open for further replies.</dd>
+</dl>
+<div class="pageNavLinkGroup">
+<div class="linkGroup SelectionCountContainer">
+</div>
+<div class="PageNav" data-page="1" data-range="2" data-start="2" data-end="6" data-last="13" data-sentinel="{{sentinel}}" data-baseurl="threads/buildtools-updates-information.42865/page-{{sentinel}}">
+<span class="pageNavHeader">Page 1 of 13</span>
+<nav>
+<a href="threads/buildtools-updates-information.42865/" class="currentPage " rel="start">1</a>
+<a class="PageNavPrev hidden">&larr;</a> <span class="scrollable"><span class="items">
+<a href="threads/buildtools-updates-information.42865/page-2" class="">2</a>
+<a href="threads/buildtools-updates-information.42865/page-3" class="">3</a>
+<a href="threads/buildtools-updates-information.42865/page-4" class="">4</a>
+<a href="threads/buildtools-updates-information.42865/page-5" class="">5</a>
+<a href="threads/buildtools-updates-information.42865/page-6" class="">6</a>
+</span></span> <a class="PageNavNext ">&rarr;</a>
+<a href="threads/buildtools-updates-information.42865/page-13" class="">13</a>
+<a href="threads/buildtools-updates-information.42865/page-2" class="text">Next &gt;</a>
+</nav>
+</div>
+</div>
+<form action="inline-mod/post/switch" method="post" class="InlineModForm section" data-cookieName="posts" data-controls="#InlineModControls" data-imodOptions="#ModerationSelect option">
+<ol class="messageList" id="messageList">
+<li id="post-487985" class="sectionMain message  staff   uix_threadAuthor uix_discussionAuthor" data-author="md_5">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/md_5.1/" class="avatar Av1m" data-avatarhtml="true"><img src="https://secure.gravatar.com/avatar/b53fd878a84d268da2b6456e0b96cae5?s=96&amp;d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_m.png" width="96" height="96" alt="md_5"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/md_5.1/" class="username" dir="auto" itemprop="name"><span class="style3">md_5</span></a>
+</div>
+<em class="rank rankAdmin wrapped" itemprop="title"><span class="before"></span><strong>Administrator</strong><span class="after"></span></em>
+<em class="rank rankDeveloper wrapped" itemprop="title"><span class="before"></span><strong>Developer</strong><span class="after"></span></em>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+It&#039;s been nearly 40 days since our 1.8 builds were released, and in that time we have made around 240 releases, averaging around 5 a day. Great work and many thanks to all those who have contributed, and of course our other core developer Thinkofdeath.<br/>
+<br/>
+I&#039;d like to use this time to point out a number of resources which have emerged in the community, and also re-document the slightly simplified process of installing 1.8 (and also Mac OSX and JDK-less support for BuildTools). Without further ado, here are the new recommended requirements and instructions for using BuildTools to generate your server jars:<br/>
+<br/>
+<span style="font-size: 18px"><span style="text-decoration: underline"><b>Requirements</b></span></span><br/>
+<ul>
+<li>Computer powerful enough to run Minecraft<ul>
+<li>1GB of free disk space.</li>
+<li>2GB of memory, at least 1GB free. (Minimum for Minecraft).<br/>
+</li>
+<li>Java 7 or Java 8 installed. (Recommended for Minecraft).<br/>
+</li>
+<li>Git &amp; Bash installed.</li>
+</ul></li>
+</ul><span style="font-size: 18px"><span style="text-decoration: underline"><b>Installing Java</b></span></span><br/>
+Minecraft only requires Java 6 to run, whilst BuildTools requires at least Java 7. Given that Java 6 was EOL&#039;d in February 2013, all users are recommended to be running Java 7 or Java 8. If not you can download it for your platform from the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html" target="_blank" class="externalLink">Oracle Technology Network</a>.<br/>
+<br/>
+Linux users might find it easier to use their distributions package manager, the instructions for a few distributions are provided below.<br/>
+<b>Debian / Ubuntu: </b>
+<div class="bbCodeBlock bbCodeCode">
+<div class="type">Code (Bash):</div>
+<div class="code"><span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">apt-get install</span> openjdk-<span style="color: #000000;">7</span>-jre-headless</div>
+</div><b>Ubuntu 14.10:</b>
+<div class="bbCodeBlock bbCodeCode">
+<div class="type">Code (Bash):</div>
+<div class="code"><span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">apt-get install</span> openjdk-<span style="color: #000000;">8</span>-jre-headless</div>
+</div><b>RHEL/CentOS:</b>
+<div class="bbCodeBlock bbCodeCode">
+<div class="type">Code (Bash):</div>
+<div class="code"><span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">yum install</span> java-1.7.0-openjdk</div>
+</div><b>Fedora 21:</b>
+<div class="bbCodeBlock bbCodeCode">
+<div class="type">Code (Bash):</div>
+<div class="code"><span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">yum install</span> java-1.8.0-openjdk</div>
+</div><span style="font-size: 18px"><span style="text-decoration: underline"><b>Installing Git</b></span></span><br/>
+You need a tool named Git installed in order to download the server sources for compilation. On Windows, Git will also provide some other tools which would otherwise be unavailable for compilation. Fortunately Git is very easy to install, just follow the instructions on the <a href="http://git-scm.com/downloads" target="_blank" class="externalLink">Git Download Page</a>.<br/>
+<br/>
+<span style="text-decoration: underline"><b><span style="font-size: 18px">Downloading and Running BuildTools</span></b></span><br/>
+<ol>
+<li>Open a shell.<ol>
+<li>Windows: Open an MSysGit Bash terminal. You can do this by clicking on the icon, or right clicking in an empty folder.</li>
+<li>Mac OSX: Open the terminal application.</li>
+<li>Linux: You know how to do this.</li>
+</ol></li>
+<li>Download BuildTools.jar. There are a number of ways to download BuildTools, you could:<ol>
+<li>Download it straight from your browser by clicking <a href="https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar" target="_blank" class="externalLink">this link</a>.</li>
+<li>Windows / Mac OSX / Most Linux: Use curl to download it:
+<div class="bbCodeBlock bbCodeCode">
+<div class="type">Code (Bash):</div>
+<div class="code">curl <span style="color: #ff0000;">&quot;https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar&quot;</span> <span style="color: #660033;">-o</span> BuildTools.jar</div>
+</div></li>
+<li>Other Linux: Use wget to download it:
+<div class="bbCodeBlock bbCodeCode">
+<div class="type">Code (Bash):</div>
+<div class="code"><span style="color: #c20cb9; font-weight: bold;">wget</span> <span style="color: #ff0000;">&quot;https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar&quot;</span> <span style="color: #660033;">-O</span> BuildTools.jar</div>
+</div></li>
+</ol></li>
+<li>Run BuildTools:
+<div class="bbCodeBlock bbCodeCode">
+<div class="type">Code (Bash):</div>
+<div class="code">java <span style="color: #660033;">-jar</span> BuildTools.jar</div>
+</div></li>
+<li>You&#039;re done! Check your folder for the server jars. Thanks for using CraftBukkit | Spigot.</li>
+<li>To update your server, simply run BuildTools again. It is also recommended to <b>update BuildTools.jar at least weekly.</b></li>
+</ol>If you have any issues, check the troubleshooting guide for help: <a href="http://www.spigotmc.org/wiki/buildtools/#troubleshooting-and-help" class="internalLink">http://www.spigotmc.org/wiki/buildtools/#troubleshooting-and-help</a><br/>
+<br/>
+<span style="font-size: 18px"><span style="text-decoration: underline"><b>Changelog</b></span></span><br/>
+In case you don&#039;t feel like trudging through Git commit logs, <a href="https://www.spigotmc.org/members/3284/" class="username" data-user="3284, @Dead-i">@Dead-i</a> has created an awesome changelog. Check it out here: <a href="http://www.spigotmc.org/wiki/changelog/" class="internalLink">http://www.spigotmc.org/wiki/changelog/</a><br/>
+<br/>
+<span style="font-size: 18px"><span style="text-decoration: underline"><b>RSS Feeds</b></span></span><br/>
+You can also find RSS feeds with changelogs here: <a href="https://hub.spigotmc.org/jenkins/view/RSS/" target="_blank" class="externalLink">https://hub.spigotmc.org/jenkins/view/RSS/</a><br/>
+<br/>
+<span style="font-size: 18px"><span style="text-decoration: underline"><b>Maven Repository</b></span></span><br/>
+We now have a Maven repository up and running, for more info please see the wiki page: <a href="http://www.spigotmc.org/wiki/spigot-maven/" class="internalLink">http://www.spigotmc.org/wiki/spigot-maven/</a><br/>
+<br/>
+<span style="font-size: 18px"><span style="text-decoration: underline"><b>Wiki</b></span></span><br/>
+Massive thanks to all those who have been working on the wiki. It would be great to get people to continue to help update the documentation and include some of the changes listed in this new guide. (No JAVA_HOME or MAVEN_OPTS anymore!). If you require access to a locked page, just leave a message on the discussion page and someone will set you up with access.<br/>
+<br/>
+<br/>
+Thanks for your support through all of 2014 and we hope 2015 is equally awesome,<br/>
+Long Live Spigot!<br/>
+<br/>
+~Spigot Team
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/487985/permalink">#1</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/md_5.1/" class="username author" dir="auto">md_5</a>,</span>
+<a href="threads/buildtools-updates-information.42865/" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:13 PM">Jan 5, 2015</span>
+</a>
+</span>
+<div class="editDate item">
+Last edited: <span class="DateTime" title="Jan 11, 2015 at 11:34 PM">Jan 11, 2015</span>
+</div>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Like" title="Like" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -32px; width: 16px; height: 16px;"/> x <strong>85</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Winner" title="Winner" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -192px; width: 16px; height: 16px;"/> x <strong>19</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Useful" title="Useful" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px 0px; width: 16px; height: 16px;"/> x <strong>15</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Informative" title="Informative" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -96px; width: 16px; height: 16px;"/> x <strong>14</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Optimistic" title="Optimistic" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -64px; width: 16px; height: 16px;"/> x <strong>4</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Agree" title="Agree" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -16px; width: 16px; height: 16px;"/> x <strong>3</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Friendly" title="Friendly" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -112px; width: 16px; height: 16px;"/> x <strong>3</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Funny" title="Funny" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -128px; width: 16px; height: 16px;"/> x <strong>2</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Creative" title="Creative" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -80px; width: 16px; height: 16px;"/> x <strong>2</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-487991" class="sectionMain message     " data-author="redfrosting">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/redfrosting.3525/" class="avatar Av3525m" data-avatarhtml="true"><img src="data/avatars/m/3/3525.jpg?1421109609" width="96" height="96" alt="redfrosting"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/redfrosting.3525/" class="username" dir="auto" itemprop="name">redfrosting</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Thanks once again
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-487991" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/487991/permalink">#2</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/redfrosting.3525/" class="username author" dir="auto">redfrosting</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-487991" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:14 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Agree" title="Agree" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -16px; width: 16px; height: 16px;"/> x <strong>2</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Winner" title="Winner" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -192px; width: 16px; height: 16px;"/> x <strong>2</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Like" title="Like" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -32px; width: 16px; height: 16px;"/> x <strong>1</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Informative" title="Informative" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -96px; width: 16px; height: 16px;"/> x <strong>1</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Creative" title="Creative" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -80px; width: 16px; height: 16px;"/> x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-487997" class="sectionMain message     " data-author="x_L">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/x_l.3755/" class="avatar Av3755m" data-avatarhtml="true"><img src="//static.spigotmc.org/styles/spigot/xenforo/avatars/avatar_male_m.png" width="96" height="96" alt="x_L"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/x_l.3755/" class="username" dir="auto" itemprop="name">x_L</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/x_l.3755/medals" class="OverlayTrigger Tooltip" title="Redstone" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/4_1380671709m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Second!<br/>
+Nice job. (let me actually read it!)
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-487997" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/487997/permalink">#3</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/x_l.3755/" class="username author" dir="auto">x_L</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-487997" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:14 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Funny" title="Funny" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -128px; width: 16px; height: 16px;"/> Funny x <strong>3</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Like" title="Like" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -32px; width: 16px; height: 16px;"/> Like x <strong>1</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Agree" title="Agree" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -16px; width: 16px; height: 16px;"/> Agree x <strong>1</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Winner" title="Winner" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -192px; width: 16px; height: 16px;"/> Winner x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488009" class="sectionMain message     " data-author="joehot200">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/joehot200.147/" class="avatar Av147m" data-avatarhtml="true"><img src="https://secure.gravatar.com/avatar/0d72fc8208288f8c71dfb1850926fba6?s=96&amp;d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_m.png" width="96" height="96" alt="joehot200"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/joehot200.147/" class="username" dir="auto" itemprop="name">joehot200</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/joehot200.147/medals" class="OverlayTrigger Tooltip" title="Redstone" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/4_1380671709m.jpg"/>
+</a>
+<a href="members/joehot200.147/medals" class="OverlayTrigger Tooltip" title="Diamond" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/7_1380671727m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Thank god for that. Maybe this will stem the tide of &quot;BUILDTOOLS NO WORK!!!!&quot; threads.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488009" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488009/permalink">#4</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/joehot200.147/" class="username author" dir="auto">joehot200</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488009" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:17 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Optimistic" title="Optimistic" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -64px; width: 16px; height: 16px;"/> Optimistic x <strong>4</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Winner" title="Winner" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -192px; width: 16px; height: 16px;"/> Winner x <strong>1</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Creative" title="Creative" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -80px; width: 16px; height: 16px;"/> Creative x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488011" class="sectionMain message     " data-author="freakdk">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/freakdk.749/" class="avatar Av749m" data-avatarhtml="true"><img src="//static.spigotmc.org/styles/spigot/xenforo/avatars/avatar_male_m.png" width="96" height="96" alt="freakdk"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/freakdk.749/" class="username" dir="auto" itemprop="name">freakdk</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Thank you for your hard work and effort!
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488011" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488011/permalink">#5</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/freakdk.749/" class="username author" dir="auto">freakdk</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488011" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:17 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Like" title="Like" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -32px; width: 16px; height: 16px;"/> Like x <strong>1</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Winner" title="Winner" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -192px; width: 16px; height: 16px;"/> Winner x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488021" class="sectionMain message     " data-author="booboo3595">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/booboo3595.7166/" class="avatar Av7166m" data-avatarhtml="true"><img src="data/avatars/m/7/7166.jpg?1437867212" width="96" height="96" alt="booboo3595"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/booboo3595.7166/" class="username" dir="auto" itemprop="name">booboo3595</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/booboo3595.7166/medals" class="OverlayTrigger Tooltip" title="Cake" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/9_1380671695m.jpg"/>
+</a>
+<a href="members/booboo3595.7166/medals" class="OverlayTrigger Tooltip" title="Redstone" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/4_1380671709m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+&lt;3
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488021" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488021/permalink">#6</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/booboo3595.7166/" class="username author" dir="auto">booboo3595</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488021" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:20 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Like" title="Like" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -32px; width: 16px; height: 16px;"/> Like x <strong>2</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Useful" title="Useful" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px 0px; width: 16px; height: 16px;"/> Useful x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488023" class="sectionMain message     " data-author="MCShamrock">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/mcshamrock.2067/" class="avatar Av2067m" data-avatarhtml="true"><img src="https://secure.gravatar.com/avatar/ed680974a75eff7d22975c5bd9399432?s=96&amp;d=https%3A%2F%2Fstatic.spigotmc.org%2Fstyles%2Fspigot%2Fxenforo%2Favatars%2Favatar_male_m.png" width="96" height="96" alt="MCShamrock"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/mcshamrock.2067/" class="username" dir="auto" itemprop="name">MCShamrock</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Well, Long Live Spigot! <img src="styles/default/xenforo/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)"/><br/>
+Great work!
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488023" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488023/permalink">#7</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/mcshamrock.2067/" class="username author" dir="auto">MCShamrock</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488023" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:20 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Like" title="Like" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -32px; width: 16px; height: 16px;"/> Like x <strong>1</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Winner" title="Winner" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -192px; width: 16px; height: 16px;"/> Winner x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488024" class="sectionMain message     " data-author="Kanegae">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/kanegae.24437/" class="avatar Av24437m" data-avatarhtml="true"><img src="data/avatars/m/24/24437.jpg?1417383063" width="96" height="96" alt="Kanegae"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/kanegae.24437/" class="username" dir="auto" itemprop="name">Kanegae</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="md_5">
+<aside>
+<div class="attribution type">md_5 said:
+<a href="goto/post?id=487985#post-487985" class="AttributionLink">&uarr;</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Open a shell.<br/>
+Linux: You know how to do this.</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Hahaha. Thanks for everything!
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488024" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488024/permalink">#8</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/kanegae.24437/" class="username author" dir="auto">Kanegae</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488024" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:20 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Funny" title="Funny" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -128px; width: 16px; height: 16px;"/> Funny x <strong>5</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Agree" title="Agree" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -16px; width: 16px; height: 16px;"/> Agree x <strong>3</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Winner" title="Winner" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -192px; width: 16px; height: 16px;"/> Winner x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488038" class="sectionMain message     " data-author="AppleNick">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/applenick.1410/" class="avatar Av1410m" data-avatarhtml="true"><img src="data/avatars/m/1/1410.jpg?1463876003" width="96" height="96" alt="AppleNick"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/applenick.1410/" class="username" dir="auto" itemprop="name">AppleNick</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/applenick.1410/medals" class="OverlayTrigger Tooltip" title="Lapis Lazuli" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/5_1380671716m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Thanks again <img src="styles/default/xenforo/clear.png" class="mceSmilieSprite mceSmilie8" alt=":D" title="Big Grin    :D"/>
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488038" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488038/permalink">#9</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/applenick.1410/" class="username author" dir="auto">AppleNick</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488038" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:26 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Agree" title="Agree" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -16px; width: 16px; height: 16px;"/> Agree x <strong>2</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Like" title="Like" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -32px; width: 16px; height: 16px;"/> Like x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488044" class="sectionMain message     " data-author="RenegadeEagle">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/renegadeeagle.14278/" class="avatar Av14278m" data-avatarhtml="true"><img src="data/avatars/m/14/14278.jpg?1457236113" width="96" height="96" alt="RenegadeEagle"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/renegadeeagle.14278/" class="username" dir="auto" itemprop="name">RenegadeEagle</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/renegadeeagle.14278/medals" class="OverlayTrigger Tooltip" title="Lapis Lazuli" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/5_1380671716m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+awwwww yisssss
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488044" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488044/permalink">#10</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/renegadeeagle.14278/" class="username author" dir="auto">RenegadeEagle</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488044" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:29 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Agree" title="Agree" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -16px; width: 16px; height: 16px;"/> Agree x <strong>2</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488078" class="sectionMain message     " data-author="Tassoon">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/tassoon.25325/" class="avatar Av25325m" data-avatarhtml="true"><img src="data/avatars/m/25/25325.jpg?1440874024" width="96" height="96" alt="Tassoon"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/tassoon.25325/" class="username" dir="auto" itemprop="name">Tassoon</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Yay MAC THANK YOU
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488078" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488078/permalink">#11</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/tassoon.25325/" class="username author" dir="auto">Tassoon</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488078" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:45 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Like" title="Like" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -32px; width: 16px; height: 16px;"/> Like x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488088" class="sectionMain message     " data-author="thegarfish">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/thegarfish.4019/" class="avatar Av4019m" data-avatarhtml="true"><img src="data/avatars/m/4/4019.jpg?1389500501" width="96" height="96" alt="thegarfish"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/thegarfish.4019/" class="username" dir="auto" itemprop="name">thegarfish</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/thegarfish.4019/medals" class="OverlayTrigger Tooltip" title="Lapis Lazuli" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/5_1380671716m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Thanks! Keep it up Spigot. <img src="styles/default/xenforo/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)"/>
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488088" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488088/permalink">#12</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/thegarfish.4019/" class="username author" dir="auto">thegarfish</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488088" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:49 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488090" class="sectionMain message     " data-author="crazyeye443">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/crazyeye443.24315/" class="avatar Av24315m" data-avatarhtml="true"><img src="data/avatars/m/24/24315.jpg?1413722157" width="96" height="96" alt="crazyeye443"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/crazyeye443.24315/" class="username" dir="auto" itemprop="name">crazyeye443</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+I appreciate the teams hard work and dedication to the project. Leaps and bounds with your updates. I&#039;m looking forward to restarting my server with Spigot! Currently moving and server is in the back of the truck <img src="styles/default/xenforo/clear.png" class="mceSmilieSprite mceSmilie3" alt=":(" title="Frown    :("/>
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488090" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488090/permalink">#13</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/crazyeye443.24315/" class="username author" dir="auto">crazyeye443</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488090" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 5, 2015 at 11:50 PM">Jan 5, 2015</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488103" class="sectionMain message     " data-author="oldfart">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/oldfart.31363/" class="avatar Av31363m" data-avatarhtml="true"><img src="data/avatars/m/31/31363.jpg?1417422817" width="96" height="96" alt="oldfart"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/oldfart.31363/" class="username" dir="auto" itemprop="name">oldfart</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+You guys are the best. Thank you!!!
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488103" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488103/permalink">#14</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/oldfart.31363/" class="username author" dir="auto">oldfart</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488103" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 6, 2015 at 12:01 AM">Jan 6, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Agree" title="Agree" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -16px; width: 16px; height: 16px;"/> Agree x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488110" class="sectionMain message     " data-author="EODSteven">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/eodsteven.15968/" class="avatar Av15968m" data-avatarhtml="true"><img src="data/avatars/m/15/15968.jpg?1462785512" width="96" height="96" alt="EODSteven"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/eodsteven.15968/" class="username" dir="auto" itemprop="name">EODSteven</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/eodsteven.15968/medals" class="OverlayTrigger Tooltip" title="Redstone" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/4_1380671709m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Thanks to all the MD_5 team!, So where is the download for the Spigot.jar at? (Jk)
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488110" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488110/permalink">#15</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/eodsteven.15968/" class="username author" dir="auto">EODSteven</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488110" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 6, 2015 at 12:05 AM">Jan 6, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Funny" title="Funny" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -128px; width: 16px; height: 16px;"/> Funny x <strong>3</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488126" class="sectionMain message     " data-author="bloxParadise_">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/bloxparadise_.1966/" class="avatar Av1966m" data-avatarhtml="true"><img src="data/avatars/m/1/1966.jpg?1455840029" width="96" height="96" alt="bloxParadise_"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/bloxparadise_.1966/" class="username" dir="auto" itemprop="name">bloxParadise_</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Good job , keep it up.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488126" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488126/permalink">#16</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/bloxparadise_.1966/" class="username author" dir="auto">bloxParadise_</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488126" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 6, 2015 at 12:11 AM">Jan 6, 2015</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488130" class="sectionMain message     " data-author="Sergeant_">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/sergeant_.1441/" class="avatar Av1441m" data-avatarhtml="true"><img src="data/avatars/m/1/1441.jpg?1449322666" width="96" height="96" alt="Sergeant_"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/sergeant_.1441/" class="username" dir="auto" itemprop="name">Sergeant_</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/sergeant_.1441/medals" class="OverlayTrigger Tooltip" title="Diamond" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/7_1380671727m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Great work!
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488130" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488130/permalink">#17</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/sergeant_.1441/" class="username author" dir="auto">Sergeant_</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488130" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 6, 2015 at 12:13 AM">Jan 6, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Informative" title="Informative" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -96px; width: 16px; height: 16px;"/> Informative x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488133" class="sectionMain message     " data-author="ednermanslaya12">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/ednermanslaya12.14677/" class="avatar Av14677m" data-avatarhtml="true"><img src="data/avatars/m/14/14677.jpg?1413785390" width="96" height="96" alt="ednermanslaya12"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/ednermanslaya12.14677/" class="username" dir="auto" itemprop="name">ednermanslaya12</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="Mctyler">
+<aside>
+<div class="attribution type">Mctyler said:
+<a href="goto/post?id=488110#post-488110" class="AttributionLink">&uarr;</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Thanks to all the MD_5 team!, So where is the download for the Spigot.jar at? (Jk)</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>hmm.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488133" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488133/permalink">#18</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/ednermanslaya12.14677/" class="username author" dir="auto">ednermanslaya12</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488133" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 6, 2015 at 12:14 AM">Jan 6, 2015</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488142" class="sectionMain message     " data-author="FrostedSnowman">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/frostedsnowman.22452/" class="avatar Av22452m" data-avatarhtml="true"><img src="data/avatars/m/22/22452.jpg?1418134528" width="96" height="96" alt="FrostedSnowman"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/frostedsnowman.22452/" class="username" dir="auto" itemprop="name">FrostedSnowman</a>
+</div>
+ 
+</h3>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<a href="https://www.spigotmc.org/members/1/" class="username" data-user="1, @md_5">@md_5</a> Thank you for clearing things up. Now the noobies know what to do. No more 27 page threads on the instructions for buildtools <img src="styles/default/xenforo/clear.png" class="mceSmilieSprite mceSmilie7" alt=":p" title="Stick Out Tongue    :p"/>
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488142" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488142/permalink">#19</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/frostedsnowman.22452/" class="username author" dir="auto">FrostedSnowman</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488142" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 6, 2015 at 12:18 AM">Jan 6, 2015</span>
+</a>
+</span>
+</div>
+<div class="dark_postrating likesSummary secondaryContent">
+<div class="dark_postrating_container">
+<ul class="dark_postrating_outputlist">
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Agree" title="Agree" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -16px; width: 16px; height: 16px;"/> Agree x <strong>1</strong>
+</li>
+<li>
+<img src="styles/default/xenforo/clear.png" alt="Funny" title="Funny" style="background: url('styles/dark/ratings/spritesheet.png') no-repeat 0px -128px; width: 16px; height: 16px;"/> Funny x <strong>1</strong>
+</li>
+</ul>
+<script type="text/javascript">
+var dark_postrating_minimum_opacity = 0;
+</script>
+<ul class="dark_postrating_inputlist ">
+</ul>
+</div>
+<div style="clear: right;"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="post-488150" class="sectionMain message     " data-author="gabep10">
+<div class="uix_message ">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock  is-expanded ">
+<div class="avatarHolder is-expanded">
+<div class="uix_avatarHolderInner">
+<span class="helper"></span>
+<a href="members/gabep10.10772/" class="avatar Av10772m" data-avatarhtml="true"><img src="data/avatars/m/10/10772.jpg?1402025122" width="96" height="96" alt="gabep10"/></a>
+ 
+</div>
+</div>
+<h3 class="userText">
+<div class="uix_userTextInner">
+<a href="members/gabep10.10772/" class="username" dir="auto" itemprop="name">gabep10</a>
+</div>
+ 
+</h3>
+<div class="extraUserInfo is-expanded">
+<div class="medals">
+<a href="members/gabep10.10772/medals" class="OverlayTrigger Tooltip" title="Redstone" data-offsetX="-12" data-offsetY="-12" style="display: inline-block">
+<img src="data/medal/4_1380671709m.jpg"/>
+</a>
+</div>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="xVolcanic_">
+<aside>
+<div class="attribution type">xVolcanic_ said:
+<a href="goto/post?id=488007#post-488007" class="AttributionLink">&uarr;</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">lol</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div><img src="styles/default/xenforo/clear.png" class="mceSmilieSprite mceSmilie8" alt=":D" title="Big Grin    :D"/>
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="messageDetails">
+<a href="threads/buildtools-updates-information.42865/#post-488150" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/488150/permalink">#20</a>
+<span class="item muted">
+<span class="authorEnd"><a href="members/gabep10.10772/" class="username author" dir="auto">gabep10</a>,</span>
+<a href="threads/buildtools-updates-information.42865/#post-488150" title="Permalink" class="datePermalink">
+<span class="DateTime" title="Jan 6, 2015 at 12:23 AM">Jan 6, 2015</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</li>
+</ol>
+<input type="hidden" name="_xfToken" value=""/>
+</form>
+<div class="pageNavLinkGroup">
+<div class="linkGroup">
+<a href="login/" class="concealed element OverlayTrigger">(You must log in or sign up to post here.)</a>
+</div>
+<div class="linkGroup" style="display: none"><a href="javascript:" class="muted JsOnly DisplayIgnoredContent Tooltip" title="Show hidden content by ">Show Ignored Content</a></div>
+<div class="PageNav" data-page="1" data-range="2" data-start="2" data-end="6" data-last="13" data-sentinel="{{sentinel}}" data-baseurl="threads/buildtools-updates-information.42865/page-{{sentinel}}">
+<span class="pageNavHeader">Page 1 of 13</span>
+<nav>
+<a href="threads/buildtools-updates-information.42865/" class="currentPage " rel="start">1</a>
+<a class="PageNavPrev hidden">&larr;</a> <span class="scrollable"><span class="items">
+<a href="threads/buildtools-updates-information.42865/page-2" class="">2</a>
+<a href="threads/buildtools-updates-information.42865/page-3" class="">3</a>
+<a href="threads/buildtools-updates-information.42865/page-4" class="">4</a>
+<a href="threads/buildtools-updates-information.42865/page-5" class="">5</a>
+<a href="threads/buildtools-updates-information.42865/page-6" class="">6</a>
+</span></span> <a class="PageNavNext ">&rarr;</a>
+<a href="threads/buildtools-updates-information.42865/page-13" class="">13</a>
+<a href="threads/buildtools-updates-information.42865/page-2" class="text">Next &gt;</a>
+</nav>
+</div>
+</div>
+<dl class="threadAlerts secondaryContent">
+<dt>Thread Status:</dt>
+<dd class="lockedAlert">
+<span class="icon Tooltip" title="Locked" data-tipclass="iconTip"></span>
+Not open for further replies.</dd>
+</dl>
+ 
+<form action="login/login" method="post" class="xenForm " id="login" style="display:none">
+<div class="ctrlWrapper">
+<dl class="ctrlUnit">
+<dt><label for="LoginControl">Your name or email address:</label></dt>
+<dd><input type="text" name="login" id="LoginControl" class="textCtrl" tabindex="101"/></dd>
+</dl>
+<dl class="ctrlUnit">
+<dt>
+<label for="ctrl_password">Do you already have an account?</label>
+</dt>
+<dd>
+<ul>
+<li><label for="ctrl_not_registered"><input type="radio" name="register" value="1" id="ctrl_not_registered" tabindex="105"/>
+No, create an account now.</label></li>
+<li><label for="ctrl_registered"><input type="radio" name="register" value="0" id="ctrl_registered" tabindex="105" checked="checked" class="Disabler"/>
+Yes, my password is:</label></li>
+<li id="ctrl_registered_Disabler">
+<input type="password" name="password" class="textCtrl" id="ctrl_password" tabindex="102"/>
+<div class="lostPassword"><a href="lost-password/" class="OverlayTrigger OverlayCloser" tabindex="106">Forgot your password?</a></div>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="ctrlUnit submitUnit">
+<dt></dt>
+<dd>
+<input type="submit" class="button primary" value="Log in" tabindex="104" data-loginPhrase="Log in" data-signupPhrase="Sign up"/>
+<label for="ctrl_remember" class="rememberPassword"><input type="checkbox" name="remember" value="1" checked="checked" id="ctrl_remember" tabindex="103"/> Stay logged in</label>
+</dd>
+</dl>
+</div>
+<input type="hidden" name="cookie_check" value="1"/>
+<input type="hidden" name="redirect" value="/threads/buildtools-updates-information.42865/"/>
+<input type="hidden" name="_xfToken" value=""/>
+</form>
+</div>
+<div class="breadBoxBottom">
+<nav>
+<fieldset class="breadcrumb">
+<a href="misc/quick-navigation-menu?selected=node-2" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Open quick navigation"><i class="uix_icon uix_icon-sitemap"></i> </a>
+<div class="boardTitle"><strong>SpigotMC - High Performance Minecraft</strong></div>
+<span class="crumbs">
+<span class="crust homeCrumb">
+<a href="https://www.spigotmc.org/" class="crumb"><span>Home</span></a>
+<span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+</span>
+<span class="crust selectedTabCrumb">
+<a href="https://www.spigotmc.org/forums/" class="crumb"><span>Forums</span></a>
+<span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+</span>
+<span class="crust">
+<a href="https://www.spigotmc.org/forums/#community.32" class="crumb"><span>Community</span></a>
+<span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+</span>
+<span class="crust">
+<a href="https://www.spigotmc.org/forums/news-and-announcements.2/" class="crumb"><span>News and Announcements</span></a>
+<span class="arrow"><i class="uix_icon uix_icon-breadcrumbSeparator"></i></span>
+</span>
+</span>
+</fieldset>
+</nav></div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="footer">
+<div class="pageContent">
+<div class="pageWidth">
+<dl class="choosers">
+<dt>Style</dt>
+<dd><a href="misc/style?redirect=%2Fthreads%2Fbuildtools-updates-information.42865%2F" class="OverlayTrigger Tooltip" title="Style Chooser" rel="nofollow">SpigotMC</a></dd>
+</dl>
+<ul class="footerLinks">
+<li><a href="https://www.spigotmc.org/" class="homeLink">Home</a></li>
+<li><a href="/cdn-cgi/l/email-protection#ec9f999c9c839e98ac9f9c858b8398818fc2839e8b">Contact Us</a></li>
+<li><a href="help/">Help</a></li>
+<li><a href="http://www.spigotmc.org/wiki/spigot-rules/">Terms and Rules</a></li>
+<li class="topLink"><a href="/threads/buildtools-updates-information.42865/#XenForo"><i class="uix_icon uix_icon-jumpToTop"></i> <span class="uix_hide">Top</span></a></li>
+</ul>
+</div>
+<span class="helper"></span>
+</div>
+</div>
+<div id="uix_stickyFooterSpacer"></div>
+<div class="footerLegal">
+<div class="pageContent">
+<div class="pageWidth">
+<div id="copyright">
+&copy;2012-2016 SpigotMC Pty. Ltd.
+ 
+<div class="adCopyrightNoticeStyle">Theme designed by <a href="http://www.audentio.com/shop/xenforo-themes" title="Premium XenForo Themes" rel="nofollow" target="_blank">Audentio Design</a>.</div>
+</div>
+<ul class="uix_socialMediaLinks">
+<li class="uix_socialLink uix_socialLink--twitter"><a href="https://twitter.com/Spigot_MC" target="_blank"><i class="uix_icon uix_icon-twitter"></i></a></li>
+<li class="uix_socialLink uix_socialLink--contact"><a href="/cdn-cgi/l/email-protection#483b3d3838273a3c083b38212f273c252b66273a2f"><i class="uix_icon uix_icon-email"></i></a></li>
+ 
+<li class="uix_socialLink uix_socialLink--rss"><a href="forums/-/index.rss" rel="alternate}" target="_blank"><i class="uix_icon uix_icon-rss"></i></a></li>
+</ul>
+<span class="helper"></span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 0 },
+	serverTimeInfo:
+	{
+		now: 1464043543,
+		today: 1463958000,
+		todayDow: 1
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "1",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 200,
+		closeSpeed: 100,
+		mask:
+		{
+			color: "rgb(0, 0, 0)",
+			opacity: "0.3",
+			loadSpeed: 200,
+			closeSpeed: 100
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: {"nat_public_css":true,"EWRporta2_Global":true,"thread_view":true,"message":true,"bb_code":true,"message_user_info":true,"dark_postrating":true,"login_bar":true,"moderator_bar":true,"\/\/static.spigotmc.org\/js\/dark\/postrating.js?1460197688&_v=3142c93d":true},
+	_cookieConfig: { path: "/", domain: "", prefix: "xf_"},
+	_csrfToken: "",
+	_csrfRefreshUrl: "login/csrf-token-refresh",
+	_jsVersion: "3142c93d",
+	_noRtnProtect: false,
+	_noSocialLogin: false
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Cancel",
+
+	a_moment_ago:    "A moment ago",
+	one_minute_ago:  "1 minute ago",
+	x_minutes_ago:   "%minutes% minutes ago",
+	today_at_x:      "Today at %time%",
+	yesterday_at_x:  "Yesterday at %time%",
+	day_x_at_time_y: "%day% at %time%",
+
+	day0: "Sunday",
+	day1: "Monday",
+	day2: "Tuesday",
+	day3: "Wednesday",
+	day4: "Thursday",
+	day5: "Friday",
+	day6: "Saturday",
+
+	_months: "January,February,March,April,May,June,July,August,September,October,November,December",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "The following error occurred",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Logging in",
+	click_image_show_full_size_version: "Click this image to show the full-size version.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "";
+XenForo.Facebook.forceInit = false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</div>
+<div class="uix_wrapperFix" style="height: 1px; margin-top: -1px;"></div>
+</div>
+</div>
+<script>
+
+</script>
+ 
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
